@@ -1,0 +1,26 @@
+name = "PythonLeanBridge"
+version = "0.1.0"
+defaultTargets = ["PythonLeanBridge"]
+
+[[lean_lib]]
+name = "PythonLeanBridge"
+
+[[require]]
+name = "batteries"
+git = "https://github.com/leanprover-community/batteries"
+rev = "efcc7d9bd9936ecdc625baf0d033b60866565cd5"
+
+[[require]]
+name = "Cli"
+git = "https://github.com/leanprover/lean4-cli"
+rev = "e7fd1a415c80985ade02a021172834ca2139b0ca"
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "5269898d6a51d047931107c8d72d934d8d5d3753"
+
+[[lean_exe]]
+name = "bridge_python_to_lean"
+root = "LeanRAG.BridgePythonToLean"
+supportInterpreter = true
