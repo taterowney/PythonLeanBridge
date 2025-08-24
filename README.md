@@ -5,7 +5,7 @@ with LeanEnvironment(modules=[Module("My.Module")]) as env:
 ```
 
 ```lean4
-PythonM.run (executable := "python") do
+PythonM.run (executable := "my/python/executable") do
     commandResult "import time"
     let r : Float ← commandResult "time.time()"
     IO.println s!"Current time is: {r}"
@@ -13,4 +13,4 @@ PythonM.run (executable := "python") do
 
 It automatically bridges a few "primitive" types, as well as allowing for Lean interaction with arbitrary Python `object`s (the only real type in Python under the hood). More comprehensive examples can be found in `examples.py` and `Examples.lean`
 
-**This project is under development and is kinda janky right now (I think there's still a few absolute paths somewhere in the code).
+**This project is under development and is kinda janky right now (I think there's still a few absolute paths somewhere in the code). It should be more stable soon: if you need to use it pls DM me (Tate)**
